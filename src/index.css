@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+    --font-en: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  html[lang="ar"], html[dir="rtl"] {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang="en"], html[dir="ltr"] {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.radar-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 207, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 207, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.radar-sweep-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.radar-sweep-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 207, 255, 0.15), transparent);
+  animation: radarSweep 3s infinite linear;
+}
+
+@keyframes radarSweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}

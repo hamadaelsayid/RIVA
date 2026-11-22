@@ -1,0 +1,6 @@
+{
+  "name": "RIVA - Radar Infrastructure Vision & Assessment",
+  "description": "Deep-tech Egyptian NDT radar systems for autonomous concrete and bridge diagnostics using 1.0–2.6 GHz SFCW/FMCW robotic rovers and 3D digital twin analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
